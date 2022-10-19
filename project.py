@@ -83,21 +83,16 @@ for i in res:
 
 print(ln)
 
-# take line in file based on index
 f = open('input.txt', 'r')
 lines = f.readlines()
 f.close()
 
-# write to file
-f = open('output.txt', 'w')
+f = open('out.txt', 'w')
 for i in ln:
-    f.write('Submodel ' + str(ln.index(i) + 1) + ':')
-    f.write('\n')
+    f.write('Submodel ' + str(ln.index(i) + 1) + ':'+'\n')
+    
     for j in i:
         f.write(lines[j])
-    #new line in file
-    f.write('\n')
-
 
 
 
