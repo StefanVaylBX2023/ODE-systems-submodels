@@ -87,7 +87,7 @@ f = open('input.txt', 'r')
 lines = f.readlines()
 f.close()
 
-f = open('out.txt', 'w')
+f = open('submodels.txt', 'w')
 for i in ln:
     f.write('Submodel ' + str(ln.index(i) + 1) + ':'+'\n')
     
