@@ -1,6 +1,5 @@
 from sympy import *
 
-# parser based on given input in txt file
 f = open('input.txt', 'r')
 x = []
 y = []
