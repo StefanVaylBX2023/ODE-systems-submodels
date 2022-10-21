@@ -3,6 +3,7 @@ from sympy import *
 import sys
 import time
 
+
 def read_input(filename):
     f = open(f'{filename}', 'r')
     graph = {}
@@ -22,8 +23,6 @@ def read_input(filename):
 
     f.close()
     return ind , graph
-
-
 
 def list_of_states(graph):
     
@@ -74,21 +73,14 @@ def output(res, ind, filename):
             il.append(ind[j])
         ln.append(il)
 
-
-
     f = open(f'{filename}.txt', 'r')
     lines = f.readlines()
     f.close()
-
     f = open(f'{filename}' + '-res.txt', 'w')
     for i in ln:
         f.write('Submodel ' + str(ln.index(i) + 1) + ':'+'\n')
-        
         for j in i:
             f.write(lines[j])
-    
-
-
     f.close()
 
 
