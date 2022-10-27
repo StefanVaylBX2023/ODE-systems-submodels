@@ -2,6 +2,7 @@
 from sympy import *
 import sys
 import time
+import itertools as it
 
 
 def read_input(filename):
@@ -114,6 +115,7 @@ def search_add_unions(result):
   #Final sorting before returning, TO BE FIXED
   for element in result:
     element = sort_list(element)
+  return result
 
 
 
@@ -146,6 +148,7 @@ def main():
     models = find_models(graph, Y)
     res_partial = algorithm(graph, models, Y)
     res = search_add_unions(res_partial)
+    print(res)
     output(res, ind, input[:-4])
 
 
