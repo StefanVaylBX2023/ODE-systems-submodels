@@ -27,7 +27,7 @@ def read_input(filename):
 
 
 def list_of_states(graph):
-
+    # to use `reduce` function with `union` 
     X = []  # set of states
     for value in graph.values():
         for i in value:
@@ -68,7 +68,7 @@ def algorithm(graph, models, Y):
         res.append(models[y])
     return res
 
-
+# sorted(a, key=str)
 def sort_list(list1):
   list2 = []
   for element in list1:
@@ -106,7 +106,7 @@ def search_add_unions(result):
         if new_model not in (models_to_add):
           if new_model not in (result):
             models_to_add.append(new_model)
-            print(new_model)
+            #print(new_model)
 
     #Add all the models found in this iteration
     for model in models_to_add:
@@ -126,6 +126,8 @@ def output(res, ind, filename):
         for j in i:
             il.append(ind[j])
         ln.append(il)
+
+    # with open(...) as f:
 
     f = open(f'{filename}.txt', 'r')
     lines = f.readlines()
@@ -148,7 +150,7 @@ def main():
     models = find_models(graph, Y)
     res_partial = algorithm(graph, models, Y)
     res = search_add_unions(res_partial)
-    print(res)
+    #print(res)
     output(res, ind, input[:-4])
 
 
