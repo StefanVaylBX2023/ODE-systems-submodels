@@ -118,6 +118,38 @@ def search_add_unions(result):
   return result
 
 
+def new_search_add_unions(input_array):
+  #We define the lenght of the total model (maybe we can use the variables X, Y)
+  full_lenght = len({i for lst in input_array for i in lst})
+
+  #We start by sorting the input, very important
+  for element in input_array:
+    element.sort(key=str)
+  input_array.sort(key=len)
+
+  #We initialize a new list that we will iteratively fill with the
+  #union submodels and the submodels itself
+  res = [[]]
+
+  for model in input_array:
+    for index in range(len(res)):
+
+      candidate_model = list(set(res[index]) | set(model))
+      candidate_model.sort(key=str)
+
+      if len(candidate_model) < full_lenght:
+        res.append(candidate_model)
+
+      else:  # This would mean that candidate_model = total model
+        res.append(candidate_model)
+        res.sort(key=len)
+        return res
+
+    #It's important to keep the list sorted
+    res.sort(key=len)
+
+
+
 
 def output(res, ind, filename):
     ln = []
