@@ -1,0 +1,16 @@
+dx1 = x1
+dx2 = x2
+dx3 = x3
+dx4 = x4
+dx5 = x5
+dx6 = x6
+dx7 = x7
+dx8 = x8
+y1 = x1
+y2 = x2
+y3 = x3
+y4 = x4
+y5 = x5
+y6 = x6
+y7 = x7
+y8 = x8
