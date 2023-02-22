@@ -1,3 +1,5 @@
-# Subdifferential model finder
+# Subdifferential model finder 🔎
 
-In this project we are looking for an efficient way to find all the submodels of bigger system of ordinary differential equations
+Large models described by differential equations are actively used in life science and engineering. The size of the model often makes its analysis and usage computationally expensive. It has been observed that sometimes one can first find a self-contained submodel of smaller size, analyse it, and use the result in the analysis of the larger model. In this research we achieve that by first building a graph representation of the model and then traversing it in a rigorous way to find some base submodels. This process is followed by an exhaustive search for possible union of those sub- models. This will yield all the remaining submodels not found in the previous step. We then turned our attention to the development of such algorithm in Julia, with the aim of adding it as an extension to the existing open source package [”StructuralIdentifiability.jl”](https://github.com/SciML/StructuralIdentifiability.jl). 
+
+For a complete description of the work please refer to the [attached file](submodels.pdf)
